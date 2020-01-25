@@ -19,6 +19,7 @@ class MeController extends Controller
     	return response()->json([
     		'email' => $user->email,
     		'name' => $user->name,
+            'google2fa_enabled' => (bool) $user->google2fa_enabled
     	]);
     }
 }
